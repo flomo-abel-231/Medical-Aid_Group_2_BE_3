@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+ <form method="post">
+   {% csrf_token %}
+
+   <label for="username">Username: </label>
+   <input type="text" name="username" placeholder="Username" class="form-control">
+
+   <label for="password"> Password: </label>
+   <input type="password" name="password" class="from-control">
+
+      <input type="submit" value="login">
+ </form>
+ <P> <a href=" {% url 'password_reset' %}"> Forgotten password </a></P>
+
+{% endblock %}
